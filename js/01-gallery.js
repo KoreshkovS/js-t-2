@@ -43,7 +43,7 @@ function createImageCards(arry) {
     .map(({ preview, original, description }) => {
       return `
     <div class="gallery__item">
-  <a class="gallery__link" href="large-image.jpg">
+  <a class="gallery__link" href="${original}">
   <img
   class="gallery__image"
   src="${preview}"
@@ -70,7 +70,6 @@ linkDisable(link);
 container.addEventListener('click', onImageClick);
 
 function onImageClick(evt) {
-
   if (evt.target.nodeName !== 'IMG') {
     return;
   }
